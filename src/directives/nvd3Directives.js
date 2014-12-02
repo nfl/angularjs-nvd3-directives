@@ -1280,6 +1280,7 @@
                     nodata: '@',
                     transitionDuration: '@',
                     shape: '&',
+                    useimages: '@',
                     onlyCircles: '@',
                     interactive: '@',
                     x: '&',
@@ -1406,6 +1407,10 @@
                                     if(attrs.shape){
                                         chart.scatter.onlyCircles(false);
                                         chart.scatter.shape(attrs.shape === undefined ? function(d) { return d.shape || 'circle'; } : scope.shape());
+                                    }
+                                    else if(attrs.useimages){
+                                        chart.scatter.onlyCircles(false);
+                                        chart.scatter.useImages(true);
                                     }
 
     //'pointActive', 'clipVoronoi', 'clipRadius', 'useVoronoi'
