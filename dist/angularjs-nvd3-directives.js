@@ -1,4 +1,4 @@
-/*! angularjs-nvd3-directives - v0.0.7 - 2014-12-01
+/*! angularjs-nvd3-directives - v0.0.7 - 2014-12-04
  * http://cmaurer.github.io/angularjs-nvd3-directives
  * Copyright (c) 2014 Christian Maurer; Licensed Apache License, v2.0 */
 ( function () {
@@ -1666,6 +1666,7 @@
           forcey: '@',
           stacked: '@',
           showvalues: '@',
+          showbarsasimages: '@',
           valueformat: '&',
           callback: '&',
           xaxisorient: '&',
@@ -1748,7 +1749,7 @@
                     return d[ 0 ];
                   } : scope.x() ).y( attrs.y === undefined ? function ( d ) {
                     return d[ 1 ];
-                  } : scope.y() ).showXAxis( attrs.showxaxis === undefined ? false : attrs.showxaxis === 'true' ).showYAxis( attrs.showyaxis === undefined ? false : attrs.showyaxis === 'true' ).forceY( attrs.forcey === undefined ? [ 0 ] : scope.$eval( attrs.forcey ) ).tooltips( attrs.tooltips === undefined ? false : attrs.tooltips === 'true' ).noData( attrs.nodata === undefined ? 'No Data Available.' : scope.nodata ).color( attrs.color === undefined ? nv.utils.defaultColor() : scope.color() ).showLegend( attrs.showlegend === undefined ? false : attrs.showlegend === 'true' ).showControls( attrs.showcontrols === undefined ? false : attrs.showcontrols === 'true' ).showValues( attrs.showvalues === undefined ? false : attrs.showvalues === 'true' ).stacked( attrs.stacked === undefined ? false : attrs.stacked === 'true' );
+                  } : scope.y() ).showXAxis( attrs.showxaxis === undefined ? false : attrs.showxaxis === 'true' ).showYAxis( attrs.showyaxis === undefined ? false : attrs.showyaxis === 'true' ).forceY( attrs.forcey === undefined ? [ 0 ] : scope.$eval( attrs.forcey ) ).tooltips( attrs.tooltips === undefined ? false : attrs.tooltips === 'true' ).noData( attrs.nodata === undefined ? 'No Data Available.' : scope.nodata ).color( attrs.color === undefined ? nv.utils.defaultColor() : scope.color() ).showLegend( attrs.showlegend === undefined ? false : attrs.showlegend === 'true' ).showControls( attrs.showcontrols === undefined ? false : attrs.showcontrols === 'true' ).showValues( attrs.showvalues === undefined ? false : attrs.showvalues === 'true' ).showBarsAsImages( attrs.showbarsasimages === undefined ? false : attrs.showbarsasimages === 'true' ).stacked( attrs.stacked === undefined ? false : attrs.stacked === 'true' );
                   if ( attrs.tooltipcontent ) {
                     chart.tooltipContent( scope.tooltipcontent() );
                   }

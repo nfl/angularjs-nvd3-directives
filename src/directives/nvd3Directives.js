@@ -1030,6 +1030,7 @@
                     forcey: '@',
                     stacked: '@',
                     showvalues: '@',
+                    showbarsasimages: '@',
                     valueformat: '&',
                     //'xDomain', 'yDomain',
                     //state: '@', //stacked, grouped: same as stacked === true, or stacked === false
@@ -1128,6 +1129,7 @@
                                         .showLegend(attrs.showlegend === undefined ? false : (attrs.showlegend === 'true'))
                                         .showControls(attrs.showcontrols === undefined ? false : (attrs.showcontrols === 'true'))
                                         .showValues(attrs.showvalues === undefined ? false : (attrs.showvalues === 'true'))
+                                        .showBarsAsImages(attrs.showbarsasimages === undefined ? false : (attrs.showbarsasimages === 'true'))
                                         .stacked(attrs.stacked === undefined ? false : (attrs.stacked === 'true'));
 
                                     if(attrs.tooltipcontent){
